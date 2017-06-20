@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">NameApplication</string>
+    <string name="app_name">My Social Medias</string>
     <string name="facebook_app_id">1436467953343497</string>
+    <string name="twitter_app_key">eSZDboKsQEAWIrN0C0pqoESk3</string>
 </resources>

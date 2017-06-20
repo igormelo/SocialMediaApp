@@ -24,7 +24,7 @@ public class ViewImage extends Activity {
         Intent i = getIntent();
         int position = i.getExtras().getInt("position");
         String[] filepath = i.getStringArrayExtra("filepath");
-        imageview = (CircleImageView) findViewById(R.id.profileImage);
+        imageview = (CircleImageView) findViewById(R.id.profileImageTwitter);
         Bitmap bmp = BitmapFactory.decodeFile(filepath[position]);
         imageview.setImageBitmap(bmp);
 

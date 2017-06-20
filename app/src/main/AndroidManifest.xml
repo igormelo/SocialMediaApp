@@ -3,6 +3,7 @@
     package="com.example.igorleite.nameapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -11,13 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".MainActivity">
-
-        </activity>
-
-        <activity android:name=".activities.Login"
-                    android:screenOrientation="portrait">
+        <activity android:name=".activities.FacebookActivity" />
+        <activity
+            android:name=".activities.Login"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,12 +26,16 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="@string/twitter_app_key"/>
 
-        <provider android:authorities="com.facebook.app.FacebookContentProvider1436467953343497"
+        <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:exported="true"/>
+            android:authorities="com.facebook.app.FacebookContentProvider1436467953343497"
+            android:exported="true" />
 
-
+        <activity android:name=".activities.TwitterActivity"></activity>
     </application>
 
 </manifest>
